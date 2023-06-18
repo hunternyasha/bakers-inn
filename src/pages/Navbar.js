@@ -5,35 +5,35 @@ import Products from "./Products";
 import Recipes from "./Recipes";
 import KidsCorner from "./KidsCorner";
 import ContactUs from "./ContactUs";
-import { useState,useEffect } from "react";
 import { Routes, Route, NavLink, Outlet } from "react-router-dom";
 
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const toggleNav = () => {
-    setToggleMenu(!toggleMenu);
-  };
-  useEffect(()=> {
 
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', changeWidth)
-  },[])
 
   return (
     <>
       <div className="backgroungColor">
-        <nav className="navbar ">
-        <NavLink to="/" className="navbar-brand mx-3">
-                <img src={logo} alt="logo" className="img-fluid" />
-          </NavLink>
-          {(toggleMenu || screenWidth > 768) && (
-            <div className="innerNav">
 
-              <ul className="navbar-nav me-auto">
+
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid innerNav">
+   
+          <NavLink to="/" className="navbar-brand mx-3">
+            <img src={logo} alt="logo" className="img-fluid" />
+          </NavLink>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+              </span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav   ">
                 <li className="nav-item">
                   <NavLink to="/AboutUs" className="nav-link">
                     About Us
@@ -65,21 +65,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          )}
-
-          <div className="btn" onClick={toggleNav}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
-              fill="currentColor"
-              class="bi bi-list"
-              viewBox="0 0 16 16">
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
           </div>
         </nav>
       </div>
