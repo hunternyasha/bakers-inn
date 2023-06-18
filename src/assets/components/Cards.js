@@ -105,7 +105,7 @@ const Cards = () => {
             }>
             <div className="row">
               {forKids.map((kids) => (
-                <div className=" col-12 col-md-4 col-lg-4">
+                <div className=" col-12 Item col-md-4 col-lg-4">
                   <div className="bakercard" key={kids.id}>
                     <div className="card">
                       <img
@@ -157,7 +157,7 @@ const Cards = () => {
             }>
             <div className="row">
               {forVegans.map((vegans) => (
-                <div className="col-12 col-md-4 col-lg-4">
+                <div className="col-12 Item col-md-4 col-lg-4">
                   <div className="bakercard" key={vegans.id}>
                     <div className="card">
                       <img
@@ -206,7 +206,7 @@ const Cards = () => {
             }>
             <div className="row">
               {forFamily.map((family) => (
-                <div className="col-12 col-md-4 col-lg-4">
+                <div className="col-12 Item col-md-4 col-lg-4">
                   <div className="bakercard" key={family.id}>
                     <div className="card">
                       <img

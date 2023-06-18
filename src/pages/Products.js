@@ -18,7 +18,6 @@ const Products = () => {
       <section className="productsPage">
         <div className="productsBanner col-12 container-fluid">
           <img src={homeImages.image30} alt="" className="img-fluid" />
-          <img src={homeImages.image29} alt="" className="img-fluid" />
           <h1>Our Product Range</h1>
         </div>
 

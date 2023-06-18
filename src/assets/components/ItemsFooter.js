@@ -55,18 +55,32 @@ const ItemsFooter = () => {
                     href="https://twitter.com/BakersInnZW"
                     target="_blank"
                     rel="noopener noreferrer">
-                      <img src={require('../images/Twiiter.png')} alt="" className="img-fluid" />
+                    <img
+                      src={require("../images/Twiiter.png")}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </a>
                   <a
                     href="https://www.facebook.com/BakersInnZw"
                     target="_blank"
                     rel="noopener noreferrer">
-<img src={require('../images/face.png')} alt="" className="img-fluid" />                  </a>
+                    <img
+                      src={require("../images/face.png")}
+                      alt=""
+                      className="img-fluid"
+                    />{" "}
+                  </a>
                   <a
                     href="https://www.linkedin.com/feed/"
                     target="_blank"
                     rel="noopener noreferrer">
-<img src={require('../images/link.png')} alt="" className="img-fluid" />                  </a>
+                    <img
+                      src={require("../images/link.png")}
+                      alt=""
+                      className="img-fluid"
+                    />{" "}
+                  </a>
                 </div>
               </div>
 

@@ -88,6 +88,7 @@ const ContactUs = () => {
   return (
     <>
       <section className="contactUsPage">
+        
         <div className="contactUsBanner col-12 container-fluid">
           <img src={homeImages.image33} alt="" className="img-fluid" />
           <h1>Contact Us</h1>
@@ -236,7 +237,7 @@ const ContactUs = () => {
                   <option value="1">Select Area Of Interest</option>
                 </select>
               </div>
-              <div className="col-12 col-md-6 col-lg-6 formItem">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 formItem">
                 <select
                   class="form-select mb-4"
                   aria-label="Default select example">
@@ -244,7 +245,7 @@ const ContactUs = () => {
                   <option value="1">Nature Of Enquiry</option>
                 </select>
               </div>
-              <div className=" col-12 col-md-12 col-lg-12 formItem">
+              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
                 <select
                   class="form-select mb-4"
                   aria-label="Default select example">
@@ -253,7 +254,7 @@ const ContactUs = () => {
                   <option value="2">No</option>
                 </select>
               </div>
-              <div className=" col-12 col-md-12 col-lg-12 formItem">
+              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
                 <div className="form-floating mb-4">
                   <textarea
                     className="form-control"
@@ -262,7 +263,7 @@ const ContactUs = () => {
                   <label for="floatingTextarea">Your Message</label>
                 </div>
               </div>
-              <div className=" col-12 col-md-12 col-lg-12 formItem">
+              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 formItem">
                 <button className="btn mb-4">SUBMIT</button>
               </div>
             </div>

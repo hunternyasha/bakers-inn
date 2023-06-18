@@ -25,7 +25,7 @@ const ProductsDonuts = () => {
       <div className="container-fluid outerDonut">
         <div className="d-flex innerDonut">
           {donutCards.map((donut) => (
-            <div className="col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
               <div className="card">
                 <img src={donut.donutImage} alt="" className="img-fluid" />
                 <div className="card-body">

@@ -44,7 +44,7 @@ const ProductsBread = () => {
       <div className="container-fluid outerBread ">
         <div className="d-flex innerBread">
           {breadCards.map((bread) => (
-            <div className="col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
               <div className="card">
                 <img src={bread.breadImage} alt="" className="img-fluid" />
                 <div className="card-body">

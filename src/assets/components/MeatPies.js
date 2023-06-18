@@ -25,7 +25,7 @@ const MeatPies = () => {
       <div className="container-fluid outermeat ">
         <div className="d-flex innermeat">
           {meatPieCards.map((meat) => (
-            <div className="col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
               <div className="card">
                 <img src={meat.meatImage} alt="" className="img-fluid" />
                 <div className="card-body">

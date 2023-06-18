@@ -26,7 +26,7 @@ const ProductsScones = () => {
       <div className="container-fluid outerScones">
         <div className="d-flex innerScones">
           {sconesCards.map((scones) => (
-            <div className="col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
               <div className="card">
                 <img src={scones.sconesImage} alt="" className="img-fluid" />
                 <div className="card-body">

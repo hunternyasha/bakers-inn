@@ -28,12 +28,12 @@ const AboutUs = () => {
           <img src={homeImages.image19} alt="" className="img-fluid" />
           <h1>{aboutUsTitles.aboutUsHeading}</h1>
         </div>
-
+        
         <div className="ourVisions ">
           <div className="outerVisions">
             <div className="row container innerOurVisions">
               {visonsMissionTextImages.map((mission) => (
-                <div className="col-12 col-md-6 col-lg-6 ourVisionItem">
+                <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ourVisionItem">
                   <div className="d-flex align-items-center" key={mission.id}>
                     <div className="missionLogo">
                       <img
@@ -58,10 +58,10 @@ const AboutUs = () => {
         <div className="aboutCeo">
           <div className="container outerAboutCeo">
             <div className="row align-items-center innerAboutCeo ">
-              <div className="col-md-6 col-lg-6 AboutCeoItem">
+              <div className="col-12 col-md-12 col-lg-6 AboutCeoItem">
                 <img src={homeImages.image26} alt="" className="img-fluid" />
               </div>
-              <div className="col-md-6 col-lg-6 AboutCeoItem">
+              <div className="col-12 col-md-12 col-lg-6 AboutCeoItem">
                 <div className="ceoPadd">
                 <h2 className="pb-3">{aboutUsTitles.ceoHeading}</h2>
                 <p>{aboutUsTitles.ceoTitle}</p>
