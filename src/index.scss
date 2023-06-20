@@ -9,27 +9,27 @@ html {
 
 @font-face {
   font-family: "InterRegular";
-  src: url("./assets/fonts/InterRegular.ttf") format("ttf");
+  src: url("./assets/fonts/InterRegular.ttf");
 }
 
 @font-face {
   font-family: "InterBold";
-  src: url("./assets/fonts/InterBold.ttf") format("ttf");
+  src: url("./assets/fonts/InterBold.ttf");
 }
 
 @font-face {
   font-family: "AvenirHeavy";
-  src: url("./assets/fonts/AvenirHeavy.otf") format("otf");
+  src: url("./assets/fonts/AvenirHeavy.otf");
 }
 
 @font-face {
-  font-family: "MontserratRegular";
-  src: url("./assets/fonts/MontserratRegular.ttf") format("ttf");
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat.ttf");
 }
 
 @font-face {
   font-family: "AvenirLight";
-  src: url("./assets/fonts/AvenirLight.otf") format("otf");
+  src: url("./assets/fonts/AvenirLight.otf");
 }
 
 // .app{
@@ -38,6 +38,12 @@ html {
 //   border-left:60px  solid #B2904C;
 //   border-right:60px  solid #B2904C;
 // }
+.app {
+  .loader {
+    display: flex;
+    flex-direction: column;
+  }
+}
 nav {
   .innerNav {
     .navbar-brand {
@@ -62,7 +68,6 @@ nav {
           font-size: 20px;
           line-height: 41px;
         }
-
       }
 
       li:nth-child(5) {
@@ -101,13 +106,17 @@ nav {
           font-style: normal;
           font-weight: 700;
           font-size: 41px;
+          line-height: 60px;
           color: white;
           margin-top: 36%;
+          span{
+            border-bottom: #b2904c 5px solid;
+          }
         }
 
         p {
           color: white;
-          font-family: "Avenir LT Std";
+          font-family: "AvenirLight";
           font-style: normal;
           font-weight: 400;
           font-size: 20px;
@@ -118,7 +127,7 @@ nav {
           border-radius: 5px;
           color: white;
 
-          font-family: "Avenir LT Std";
+          font-family: "AvenirHeavy";
           font-style: normal;
           font-weight: 750;
           font-size: 28px;
@@ -171,7 +180,7 @@ nav {
 
     .AboutBakerInnItem2 {
       p {
-        font-family: "Avenir LT Std";
+        font-family: "AvenirLight";
         font-style: normal;
         font-weight: 400;
         font-size: 28px;
@@ -186,10 +195,10 @@ nav {
         border-radius: 5px;
         color: white;
         margin: 0 0 10% 0;
-        font-family: "Avenir LT Std";
+        font-family: "AvenirHeavy";
         font-style: normal;
         font-weight: 750;
-        font-size: 28px;
+        font-size: 26px;
         line-height: 34px;
         text-align: center;
       }
@@ -206,7 +215,14 @@ nav {
 .ourProducts {
   padding: 5% 0;
   background: #f8f8f8;
-
+  h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 73px;
+    color: #261b6c;
+  }
   .OuterOurProducts {
     text-align: center;
 
@@ -214,9 +230,11 @@ nav {
       background: #b2904c;
       border-radius: 5px;
       padding: 15px 60px;
-      color: white;
-      font-family: "Avenir LT Std";
+      font-size: 26px;
+      line-height: 34px;
+      font-family: "AvenirHeavy";
       font-weight: 750;
+      color: #ffffff;
     }
 
     .innerOurProducts {
@@ -259,7 +277,7 @@ nav {
         }
 
         p {
-          font-family: "Avenir LT Std";
+          font-family: "AvenirLight";
           font-style: normal;
           font-weight: 400;
           font-size: 28px;
@@ -269,14 +287,104 @@ nav {
           padding: 0 13% 0 0;
         }
 
-        button {
+        .btn {
           background: #b2904c;
           border-radius: 5px;
-          font-family: "Avenir LT Std";
+          font-family: "AvenirHeavy";
           font-style: normal;
           font-weight: 750;
           color: white;
+          font-size: 26px;
+          line-height: 34px;
           padding: 15px 60px;
+        }
+        .BookModal {
+          .modal {
+            background-color: #f7f5e8;
+            .modal-dialog {
+              .modal-content {
+                padding: 5% 0;
+                border: none;
+                background-color: white;
+                h5 {
+                  font-family: "Montserrat";
+                  font-style: normal;
+                  font-weight: 800;
+                  font-size: 40px;
+                  line-height: 73px;
+                  color: #261b6c;
+                }
+                .btn-close {
+                  position: absolute;
+                  right: 22px;
+                  top: 17px;
+                  padding: 15px;
+                  border-radius: 80px;
+                  background-color: #261b6c;
+                }
+                .modal-body {
+                  .modalForms {
+                    .modalFormItems {
+                      .form-floating {
+                        .form-control {
+                          border: none;
+                          background-color: #f7f5e8;
+                          color: blue;
+                        }
+                        .date {
+                          color: #261b6c;
+                        }
+                      }
+                      .form-select {
+                        padding: 1rem 0.75rem;
+                        border: none;
+                        background-color: #f7f5e8;
+                      }
+                      .form-check {
+                        .form-check-input {
+                          border: none;
+                          background-color: #f7f5e8;
+                          padding: 12px;
+                        }
+                        .form-check-input:focus {
+                          box-shadow: #b2904c;
+                        }
+                        .form-check-label {
+                          margin-left: 10px;
+                        }
+                        .form-check-input:checked {
+                          background-color: #261b6c;
+                          color: #261b6c;
+                        }
+                      }
+                      p {
+                        font-family: "AvenirLight";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 34px;
+                        color: #261b6c;
+                        opacity: 0.8;
+                        padding: 2% 0;
+                        span {
+                          font-family: "AvenirHeavy";
+                          margin-left: 5px;
+                        }
+                      }
+                      .form-check-label {
+                        font-family: "AvenirLight";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: #261b6c;
+                        opacity: 0.8;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -301,7 +409,7 @@ nav {
         }
 
         p {
-          font-family: "Avenir LT Std";
+          font-family: "AvenirLight";
           font-style: normal;
           font-weight: 400;
           font-size: 28px;
@@ -313,11 +421,96 @@ nav {
         button {
           background: #b2904c;
           border-radius: 5px;
-          font-family: "Avenir LT Std";
+          font-family: "AvenirHeavy";
           font-style: normal;
           font-weight: 750;
           color: white;
           padding: 15px 60px;
+          font-size: 26px;
+          line-height: 34px;
+        }
+        .donationModal {
+          .modal {
+            background-color: #f7f5e8;
+            .modal-dialog {
+              .modal-content {
+                padding: 5% 0;
+                border: none;
+                background-color: white;
+
+                .modalText {
+                  h5 {
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 40px;
+                    color: #261b6c;
+                  }
+                  p {
+                    font-family: "AvenirLight";
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #261b6c;
+                    opacity: 0.8;
+                    padding: 2% 8%;
+                  }
+                }
+                .btn-close {
+                  position: absolute;
+                  right: 22px;
+                  top: 17px;
+                  padding: 15px;
+                  border-radius: 80px;
+                  background-color: #261b6c;
+                }
+                .modal-body {
+                  .modalForms {
+                    .formItem {
+                      .form-floating {
+                        .form-control {
+                          border: none;
+                          background-color: #f7f5e8;
+                          color: blue;
+                        }
+                      }
+                      .form-select {
+                        padding: 1rem 0.75rem;
+                        border: none;
+                        background-color: #f7f5e8;
+                      }
+                      .form-check {
+                        .form-check-input {
+                          border: none;
+                          background-color: #f7f5e8;
+                          padding: 12px;
+                        }
+                        .form-check-input:focus {
+                          box-shadow: #b2904c;
+                        }
+                        .form-check-label {
+                          margin-left: 10px;
+                        }
+                        .form-check-input:checked {
+                          background-color: #261b6c;
+                          color: #261b6c;
+                        }
+                      }
+
+                      .form-check-label {
+                        font-family: "AvenirLight";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: #261b6c;
+                        opacity: 0.8;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -328,7 +521,7 @@ nav {
   padding: 15% 12px;
 
   .container-fluid {
-    padding: 15% 0 6% 0;
+    padding: 10% 0;
     background-image: url("./assets/images/Rectangle01.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -342,26 +535,26 @@ nav {
           position: relative;
           img:nth-child(1) {
             position: absolute;
-            top: -207px;
+            top: -139px;
             left: -51px;
             width: 79%;
           }
           img:nth-child(2) {
             position: absolute;
-            top: 175px;
+            top: 238px;
             left: -19px;
             width: 30%;
           }
           img:nth-child(3) {
             position: absolute;
-            top: 273px;
+            top: 338px;
             right: -44px;
             width: 14%;
           }
           img:nth-child(4) {
             position: absolute;
             left: 28px;
-            top: -314px;
+            top: -250px;
 
             z-index: 2;
           }
@@ -377,7 +570,7 @@ nav {
         }
 
         p {
-          font-family: "Avenir LT Std";
+          font-family: "AvenirLight";
           font-style: normal;
           font-weight: 400;
           font-size: 20px;
@@ -389,10 +582,12 @@ nav {
         .btn {
           background: #ff4655;
           border-radius: 5px;
-          font-family: "Avenir LT Std";
+          font-family: "AvenirHeavy";
           font-style: normal;
           font-weight: 750;
           color: white;
+          font-size: 26px;
+          line-height: 34px;
           padding: 15px 60px;
         }
       }
@@ -401,7 +596,7 @@ nav {
 }
 
 .bakersRecipes {
-  padding: 10% 0;
+  padding: 0 0 10% 0;
   background: white;
 
   .outerBakersRec {
@@ -515,10 +710,15 @@ nav {
     }
   }
 
-  .modals {
+  .modal {
+    background-color: #f7f5e8;
     .modalContent {
       background-color: #ffffff;
       .modal-body {
+        .btn-close {
+          position: absolute;
+          right: 20px;
+        }
         .modalItems {
           .allImages {
             // display: grid;
@@ -593,6 +793,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+  margin-bottom: 10%;
 
   .outerGetNot {
     .innerrGetNot {
@@ -773,6 +974,12 @@ footer {
       bottom: 0;
       left: 30px;
     }
+    .vectorLines {
+      position: absolute;
+      bottom: 0;
+      bottom: 33px;
+      right: 45px;
+    }
   }
 
   .ourVisions {
@@ -950,6 +1157,12 @@ footer {
       position: absolute;
       bottom: 0;
       left: 30px;
+    }
+    .vectorLines {
+      position: absolute;
+      bottom: 0;
+      bottom: 33px;
+      right: 45px;
     }
   }
 
@@ -1166,6 +1379,28 @@ footer {
   }
 }
 
+.tikTokFeed {
+  h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 52px;
+    width: 87%;
+    color: #261b6c;
+  }
+  p {
+    font-family: "AvenirLight";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #261b6c;
+    opacity: 0.8;
+    span {
+      color: #c6a460;
+    }
+  }
+}
+
 .kidsBanner {
   margin-top: -3%;
   padding: 0 0 5% 0;
@@ -1275,6 +1510,12 @@ footer {
       position: absolute;
       bottom: 0;
       left: 30px;
+    }
+    .vectorLines {
+      position: absolute;
+      bottom: 0;
+      bottom: 33px;
+      right: 45px;
     }
   }
   .contactAddresses {
@@ -1506,14 +1747,12 @@ footer {
             font-size: 20px;
             line-height: 41px;
           }
-
         }
-        
 
         li:nth-child(5) {
           background-color: rgb(202, 166, 82);
           padding: 0px 30px;
-          width: 50%;
+          width: 64%;
           border-radius: 4px;
 
           a {
@@ -1528,6 +1767,14 @@ footer {
       right: 13px;
     }
   }
+  // .productsPage {
+  //   .productsBanner {
+  //     h1 {
+  //       top: 123px;
+  //       font-size: 14px;
+  //     }
+  //   }
+    
 }
 @media screen and (max-width: 575px) {
   .homePage {
@@ -1600,6 +1847,13 @@ footer {
         color: #261b6c;
       }
       .OuterOurProducts {
+        .innerOurProducts {
+          .ourProductsImages {
+            img {
+              height: auto;
+            }
+          }
+        }
         .btn {
           font-size: 14px;
         }
@@ -1821,8 +2075,8 @@ footer {
   .productsPage {
     .productsBanner {
       h1 {
-        top: 128px;
-        font-size: 21px;
+        top: 123px;
+        font-size: 14px;
       }
     }
 
@@ -1934,8 +2188,8 @@ footer {
   .contactUsPage {
     .contactUsBanner {
       h1 {
-        top: 130px;
-        font-size: 21px;
+        top: 123px;
+        font-size: 14px;
       }
     }
     .contactAddresses {

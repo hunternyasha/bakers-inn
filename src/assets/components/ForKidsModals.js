@@ -100,55 +100,33 @@ const ForKidsModals = () => {
         <div class="modal-dialog modal-xl">
           <div className="modalContent">
             <div class="modal-body ">
+              <button
+                type="button"
+                className="btn-close rounded-circle"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
               <div className="modalItems">
                 <div className="allImages row">
-                  <div className="innerimage g-0 row col-4 col-md-4">
-                    
-                      <div className="image col-12 col-md-12">
-                        <img
-                          src={KidModal.image}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                      <div className="image col-12 col-md-6">
-                        <img
-                          src={KidModal.image}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                      <div className="image col-12 col-md-6">
-                        <img
-                          src={KidModal.image}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                      <div className="image col-12 col-md-6">
-                        <img
-                          src={KidModal.image}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                      <div className="image col-12 col-md-6">
-                        <img
-                          src={KidModal.image}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                   
+                  <div className="innerimage g-0 row col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <div className="image col-12 col-md-12">
+                      <img src={KidModal.image} alt="" className="img-fluid" />
+                    </div>
+                    <div className="image col-12 col-md-6">
+                      <img src={KidModal.image} alt="" className="img-fluid" />
+                    </div>
+                    <div className="image col-12 col-md-6">
+                      <img src={KidModal.image} alt="" className="img-fluid" />
+                    </div>
+                    <div className="image col-12 col-md-6">
+                      <img src={KidModal.image} alt="" className="img-fluid" />
+                    </div>
+                    <div className="image col-12 col-md-6">
+                      <img src={KidModal.image} alt="" className="img-fluid" />
+                    </div>
                   </div>
-                  <div className="modalDetailsImage col-8">
+                  <div className="modalDetailsImage col-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8">
                     <div className="modalTitles d-flex justify-content-between">
                       <h5 className="modal-title">{KidModal.modalTitle}</h5>
-                      <button
-                        type="button"
-                        className="btn-close rounded-circle"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
                     </div>
 
                     <div className="d-flex serveTime">
@@ -208,26 +186,26 @@ const ForKidsModals = () => {
                     </div>
 
                     <div className="steps">
-                                <div className="d-flex">
-                                <div className="stepTitleText">
-                        <h5 className="modal-title">
-                          {KidModal.modalStepTitle}
-                        </h5>
-                        <small>{KidModal.modulStepText}</small>
+                      <div className="d-flex">
+                        <div className="stepTitleText">
+                          <h5 className="modal-title">
+                            {KidModal.modalStepTitle}
+                          </h5>
+                          <small>{KidModal.modulStepText}</small>
+                        </div>
+                        <div className="stepTitleText">
+                          <h5 className="modal-title">
+                            {KidModal.modalStepTitle2}
+                          </h5>
+                          <small>{KidModal.modulStepText2}</small>
+                        </div>
+                        <div className="stepTitleText">
+                          <h5 className="modal-title">
+                            {KidModal.modalStepTitle3}
+                          </h5>
+                          <small>{KidModal.modulStepText3}</small>
+                        </div>
                       </div>
-                      <div className="stepTitleText">
-                        <h5 className="modal-title">
-                          {KidModal.modalStepTitle2}
-                        </h5>
-                        <small>{KidModal.modulStepText2}</small>
-                      </div>
-                      <div className="stepTitleText">
-                        <h5 className="modal-title">
-                          {KidModal.modalStepTitle3}
-                        </h5>
-                        <small>{KidModal.modulStepText3}</small>
-                      </div>
-                                </div>
                     </div>
                   </div>
                 </div>

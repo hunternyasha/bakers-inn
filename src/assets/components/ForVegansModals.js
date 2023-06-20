@@ -30,16 +30,21 @@ const ForVegansModals = () => {
     <div className="modals">
       <div
         className="modal fade"
-        id="modalToggle"
+        id="veganToogle"
         tabindex="-1"
         aria-labelledby="ModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div className="modalContent">
             <div class="modal-body ">
+              <button
+                type="button"
+                className="btn-close rounded-circle"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
               <div className="modalItems">
                 <div className="allImages row">
-                  <div className="innerimage g-0 row col-4 col-md-4">
+                  <div className="innerimage g-0 row col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                     <div className="image col-12 col-md-12">
                       <img
                         src={veganModal.image}
@@ -76,14 +81,9 @@ const ForVegansModals = () => {
                       />
                     </div>
                   </div>
-                  <div className="modalDetailsImage col-8">
+                  <div className="modalDetailsImage col-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8">
                     <div className="modalTitles d-flex justify-content-between">
                       <h5 className="modal-title">{veganModal.modalTitle}</h5>
-                      <button
-                        type="button"
-                        className="btn-close rounded-circle"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
                     </div>
 
                     <div className="d-flex serveTime">

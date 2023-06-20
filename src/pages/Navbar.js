@@ -1,26 +1,23 @@
 import logo from "../assets/images/logo.png";
-import Home from "./Home";
-import AboutUs from "./AboutUs";
-import Products from "./Products";
-import Recipes from "./Recipes";
-import KidsCorner from "./KidsCorner";
-import ContactUs from "./ContactUs";
-import { Routes, Route, NavLink, Outlet } from "react-router-dom";
-
+import React from "react";
+import { Routes, Route, NavLink, Outlet, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+const LazyHome = React.lazy(() => import("./Home"));
+const LazyAbout = React.lazy(() => import("./AboutUs"));
+const LazyProducts = React.lazy(() => import("./Products"));
+const LazyRecipes = React.lazy(() => import("./Recipes"));
+const LazyKidsCorner = React.lazy(() => import("./KidsCorner"));
+const LazyContactUs = React.lazy(() => import("./ContactUs"));
 const Navbar = () => {
-
-
+  const location = useLocation();
   return (
     <>
       <div className="backgroungColor">
-
-
         <nav class="navbar navbar-expand-lg ">
           <div class="container-fluid innerNav">
-   
-          <NavLink to="/" className="navbar-brand mx-3">
-            <img src={logo} alt="logo" className="img-fluid" />
-          </NavLink>
+            <NavLink to="/" className="navbar-brand mx-3">
+              <img src={logo} alt="logo" className="img-fluid" />
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -29,8 +26,7 @@ const Navbar = () => {
               aria-controls="navbarNav"
               aria-expanded="false"
               aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">
-              </span>
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav   ">
@@ -69,17 +65,62 @@ const Navbar = () => {
         </nav>
       </div>
       <Outlet />
-
-      <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/kidsCorner" element={<KidsCorner />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-      </Routes>
+      <AnimatePresence initial={false}>
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            index
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyHome />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/aboutUs"
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyAbout />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyProducts />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/recipes"
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyRecipes />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/kidsCorner"
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyKidsCorner />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/contactUs"
+            element={
+              <React.Suspense fallback='loading'>
+                <LazyContactUs />
+              </React.Suspense>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 };
+
 
 export default Navbar;

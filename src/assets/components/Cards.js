@@ -179,7 +179,7 @@ const Cards = () => {
                             className="btn rounded-circle float-end"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#modalToggle">
+                            data-bs-target="#veganToogle">
                             <svg class="svg-icon" viewBox="0 0 20 20">
                               <path
                                 fill="none"
@@ -228,7 +228,7 @@ const Cards = () => {
                             className="btn rounded-circle float-end"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#modalToggle">
+                            data-bs-target="#familyToogle">
                             <svg class="svg-icon" viewBox="0 0 20 20">
                               <path
                                 fill="none"

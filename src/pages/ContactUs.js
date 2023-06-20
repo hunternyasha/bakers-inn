@@ -1,7 +1,7 @@
 import { useState } from "react";
 import homeImages from "../assets/components/HomeImages";
 import ItemsFooter from "../assets/components/ItemsFooter";
-
+import PageTransions from "../assets/components/PageTransions";
 const ContactUs = () => {
   const [addresses] = useState([
     {
@@ -87,191 +87,197 @@ const ContactUs = () => {
   ]);
   return (
     <>
-      <section className="contactUsPage">
-        
-        <div className="contactUsBanner col-12 container-fluid">
-          <img src={homeImages.image33} alt="" className="img-fluid" />
-          <h1>Contact Us</h1>
-        </div>
-
-        <div className="contactAddresses  ">
-          <div className=" outerContact">
-            <div className="row innerContact ">
-              {addresses.map((contact) => (
-                <div
-                  className="col-12 col-md-6 col-lg-6 justify-content-evenly contactAdresssItem"
-                  key={contact.id}>
-                  <img
-                    src={contact.addressImage}
-                    alt=""
-                    className="img-fluid"
-                  />
-                  <h3 className="card-title pt-3 pb-3">
-                    {contact.addressHeading}
-                  </h3>
-                  <p className="card-text ">{contact.addressLocation}</p>
-                  <div className="contactMid  ">
-                    <p className="card-text">{contact.addressContact}</p>
-                    <p className="card-text pb-2">{contact.addressContac2}</p>
-                  </div>
-
-                  <div className="voip">
-                    <p className="card-text ">
-                      <span>{contact.addressVoip}</span>{" "}
-                      {contact.addressVoipNumber}
-                    </p>
-                    <p className="card-text ">
-                      <span>{contact.addressToll}</span>{" "}
-                      {contact.addressTollNum}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+      <PageTransions>
+        <section className="contactUsPage">
+          <div className="contactUsBanner col-12 container-fluid">
+            <img src={homeImages.image33} alt="" className="img-fluid" />
+            <h1>Contact Us</h1>
+            <img src={require('../assets/images/Vector.png')} alt="" className="img-fluid vectorLines" />
           </div>
-        </div>
 
-        <div className="depots">
-          <div className="container outerDepots">
-            <h1 className="text-center pb-3">List Of Baker's Inn Depots</h1>
-            <div className=" innerDeports">
-              {bakersDepots.map((depot) => (
-                <div className="depotsItem" key={depot.id}>
-                  <div className="titleBorder">
-                    <h3 className="card-title">{depot.heading}</h3>
+          <div className="contactAddresses  ">
+            <div className=" outerContact">
+              <div className="row innerContact ">
+                {addresses.map((contact) => (
+                  <div
+                    className="col-12 col-md-6 col-lg-6 justify-content-evenly contactAdresssItem"
+                    key={contact.id}>
+                    <img
+                      src={contact.addressImage}
+                      alt=""
+                      className="img-fluid"
+                    />
+                    <h3 className="card-title pt-3 pb-3">
+                      {contact.addressHeading}
+                    </h3>
+                    <p className="card-text ">{contact.addressLocation}</p>
+                    <div className="contactMid  ">
+                      <p className="card-text">{contact.addressContact}</p>
+                      <p className="card-text pb-2">{contact.addressContac2}</p>
+                    </div>
+
+                    <div className="voip">
+                      <p className="card-text ">
+                        <span>{contact.addressVoip}</span>{" "}
+                        {contact.addressVoipNumber}
+                      </p>
+                      <p className="card-text ">
+                        <span>{contact.addressToll}</span>{" "}
+                        {contact.addressTollNum}
+                      </p>
+                    </div>
                   </div>
-                  <div className="locationBorder">
-                    <p className="card-text pt-3">{depot.title}</p>
-                    <p className="card-text">{depot.title2}</p>
-                    <p className="card-text">{depot.title3}</p>
-                    <p className="card-text">{depot.title4}</p>
-                    <div className="py-3"></div>
-                    <p className="card-text">{depot.title5}</p>
-                    <p className="card-text">{depot.title6}</p>
-                    <p className="card-text">{depot.title7}</p>
-                    <p className="card-text">{depot.title8}</p>
-                    <p className="card-text">{depot.title9}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="enquiries">
-          <div className="container">
-            <img
-              src={require("../assets/images/Rectangle 31.png")}
-              alt=""
-              className="img-fluid"
-            />
-            <div className="enqTitles pt-5">
-              {enquiriesJobEmail.map((job) => (
-                <div className="enquiriesItem" key={job.id}>
-                  <h3>{job.title}</h3>
-                  <p>{job.email}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="emailUs">
-          <div className="text-center pb-3">
-            <h2>Request A Callback</h2>
-            <p>Complete the form below and we will respond within 24 hours.</p>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-md-6 col-lg-6 formItem">
-                <select
-                  className="form-select mb-4"
-                  aria-label="Default select example">
-                  <option selected>Your Title</option>
-                  <option value="1">Mrs</option>
-                  <option value="2">Mr</option>
-                  <option value="3">Dr</option>
-                </select>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-6 formItem">
-                <div class="form-floating mb-4">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="Enter yourName"
-                  />
-                  <label for="floatingInput">Your Name</label>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-6 formItem">
-                <div class="form-floating mb-4">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="Your Phone Number"
-                  />
-                  <label for="floatingInput">Your Phone Number</label>
-                </div>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 formItem">
-                <div class="form-floating mb-4">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  
-                  <label for="floatingInput">Your E-Mail</label>
-                </div>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 formItem">
-                <select
-                  class="form-select mb-4"
-                  aria-label="Default select example">
-                  <option selected>Select Area Of Interest</option>
-                  <option value="1">Select Area Of Interest</option>
-                </select>
-              </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 formItem">
-                <select
-                  class="form-select mb-4"
-                  aria-label="Default select example">
-                  <option selected>Nature Of Enquiry</option>
-                  <option value="1">Nature Of Enquiry</option>
-                </select>
-              </div>
-              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
-                <select
-                  class="form-select mb-4"
-                  aria-label="Default select example">
-                  <option selected>Do You Want To Be Contacted By Phone</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                </select>
-              </div>
-              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
-                <div className="form-floating mb-4">
-                  <textarea
-                    className="form-control"
-                    placeholder="Leave a comment here"
-                    id="floatingTextarea"></textarea>
-                  <label for="floatingTextarea">Your Message</label>
-                </div>
-              </div>
-              <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 formItem">
-                <button className="btn mb-4">SUBMIT</button>
+                ))}
               </div>
             </div>
           </div>
-        </div>
 
-        <ItemsFooter />
-      </section>
+          <div className="depots">
+            <div className="container outerDepots">
+              <h1 className="text-center pb-3">List Of Baker's Inn Depots</h1>
+              <div className=" innerDeports">
+                {bakersDepots.map((depot) => (
+                  <div className="depotsItem" key={depot.id}>
+                    <div className="titleBorder">
+                      <h3 className="card-title">{depot.heading}</h3>
+                    </div>
+                    <div className="locationBorder">
+                      <p className="card-text pt-3">{depot.title}</p>
+                      <p className="card-text">{depot.title2}</p>
+                      <p className="card-text">{depot.title3}</p>
+                      <p className="card-text">{depot.title4}</p>
+                      <div className="py-3"></div>
+                      <p className="card-text">{depot.title5}</p>
+                      <p className="card-text">{depot.title6}</p>
+                      <p className="card-text">{depot.title7}</p>
+                      <p className="card-text">{depot.title8}</p>
+                      <p className="card-text">{depot.title9}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="enquiries">
+            <div className="container">
+              <img
+                src={require("../assets/images/Rectangle 31.png")}
+                alt=""
+                className="img-fluid"
+              />
+              <div className="enqTitles pt-5">
+                {enquiriesJobEmail.map((job) => (
+                  <div className="enquiriesItem" key={job.id}>
+                    <h3>{job.title}</h3>
+                    <p>{job.email}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="emailUs">
+            <div className="text-center pb-3">
+              <h2>Request A Callback</h2>
+              <p>
+                Complete the form below and we will respond within 24 hours.
+              </p>
+            </div>
+            <div className="container">
+              <div className="row">
+                <div className="col-12 col-md-6 col-lg-6 formItem">
+                  <select
+                    className="form-select mb-4"
+                    aria-label="Default select example">
+                    <option selected>Your Title</option>
+                    <option value="1">Mrs</option>
+                    <option value="2">Mr</option>
+                    <option value="3">Dr</option>
+                  </select>
+                </div>
+
+                <div className="col-12 col-md-6 col-lg-6 formItem">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="Enter yourName"
+                    />
+                    <label for="floatingInput">Your Name</label>
+                  </div>
+                </div>
+
+                <div className="col-12 col-md-6 col-lg-6 formItem">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="Your Phone Number"
+                    />
+                    <label for="floatingInput">Your Phone Number</label>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6 col-lg-6 formItem">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+
+                    <label for="floatingInput">Your E-Mail</label>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6 col-lg-6 formItem">
+                  <select
+                    class="form-select mb-4"
+                    aria-label="Default select example">
+                    <option selected>Select Area Of Interest</option>
+                    <option value="1">Select Area Of Interest</option>
+                  </select>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 formItem">
+                  <select
+                    class="form-select mb-4"
+                    aria-label="Default select example">
+                    <option selected>Nature Of Enquiry</option>
+                    <option value="1">Nature Of Enquiry</option>
+                  </select>
+                </div>
+                <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
+                  <select
+                    class="form-select mb-4"
+                    aria-label="Default select example">
+                    <option selected>
+                      Do You Want To Be Contacted By Phone
+                    </option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                </div>
+                <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  formItem">
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Your Message</label>
+                  </div>
+                </div>
+                <div className=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 formItem">
+                  <button className="btn mb-4">SUBMIT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ItemsFooter />
+        </section>
+      </PageTransions>
     </>
   );
 };

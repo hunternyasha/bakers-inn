@@ -7,6 +7,7 @@ const ItemsFooter = () => {
     <>
       <section>
         <footer>
+          
           <div className="container outerFooter">
             <div className="footerTopItem">
               <div className="whiteBack" />
@@ -134,6 +135,11 @@ const ItemsFooter = () => {
                       Kid's Corner
                     </NavLink>
                   </li>
+                  <li className="nav-item">
+                  <NavLink to="/contactUs" className="nav-link">
+                    Contact Us
+                  </NavLink>
+                </li>
                 </ul>
               </div>
             </div>

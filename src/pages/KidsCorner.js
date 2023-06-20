@@ -1,6 +1,7 @@
 import homeImages from "../assets/components/HomeImages";
 import { useState } from "react";
 import ItemsFooter from "../assets/components/ItemsFooter";
+import PageTransions from "../assets/components/PageTransions";
 const KidsCorner = () => {
   const [kidsCornerGam] = useState([
     {
@@ -30,51 +31,60 @@ const KidsCorner = () => {
   ]);
   return (
     <>
-      <section>
-        <div className="kidsBanner">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-12 col-md-6 col-lg-6 kidsItem">
-                <img
-                  src={require("../assets/images/Group 5.png")}
-                  alt=""
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 kidsItem2">
-
-                <img src={require('../assets/images/Group 15.png')} alt="" className="" />
+      <PageTransions>
+        <section>
+          <div className="kidsBanner">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-12 col-md-6 col-lg-6 kidsItem">
+                  <img
+                    src={require("../assets/images/Group 5.png")}
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+                <div className="col-12 col-md-6 col-lg-6 kidsItem2">
+                  <img
+                    src={require("../assets/images/Group 15.png")}
+                    alt=""
+                    className=""
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="games container-fluid">
-          {kidsCornerGam.map((game) => (
-            <div className=" gameBackground ">
-              <div
-                className="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
-                key={game.id}>
-                <div className="container">
-                  <div className="row align-items-center">
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 gameItem">
-                      <h2>{game.gameName}</h2>
-                      <p>{game.gameTitle}</p>
-                      <p>{game.gameTitle2nd}</p>
-                      <button className="btn">{game.gameButtonTitle}</button>
-                    </div>
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 gameItem">
-                      <img src={game.gameImage} alt="" className="img-fluid" />
+          <div className="games container-fluid">
+            {kidsCornerGam.map((game) => (
+              <div className=" gameBackground ">
+                <div
+                  className="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+                  key={game.id}>
+                  <div className="container">
+                    <div className="row align-items-center">
+                      <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 gameItem">
+                        <h2>{game.gameName}</h2>
+                        <p>{game.gameTitle}</p>
+                        <p>{game.gameTitle2nd}</p>
+                        <button className="btn">{game.gameButtonTitle}</button>
+                      </div>
+                      <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 gameItem">
+                        <img
+                          src={game.gameImage}
+                          alt=""
+                          className="img-fluid"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <ItemsFooter />
-      </section>
+          <ItemsFooter />
+        </section>
+      </PageTransions>
     </>
   );
 };

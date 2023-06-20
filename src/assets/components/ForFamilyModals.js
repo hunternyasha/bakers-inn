@@ -30,7 +30,7 @@ const ForFamilyModals = () => {
       <div className="modals">
         <div
           className="modal fade"
-          id="modalToggle"
+          id="familyToogle"
           tabindex="-1"
           aria-labelledby="ModalLabel"
           aria-hidden="true">
@@ -39,7 +39,7 @@ const ForFamilyModals = () => {
               <div class="modal-body ">
                 <div className="modalItems">
                   <div className="allImages row">
-                    <div className="innerimage g-0 row col-4 col-md-4">
+                    <div className="innerimage g-0 row col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                       <div className="image col-12 col-md-12">
                         <img
                           src={familyModal.image}
@@ -76,7 +76,7 @@ const ForFamilyModals = () => {
                         />
                       </div>
                     </div>
-                    <div className="modalDetailsImage col-8">
+                    <div className="modalDetailsImage col-12 col-md-4 col-lg-8 col-xl-8 col-xxl-8">
                       <div className="modalTitles d-flex justify-content-between">
                         <h5 className="modal-title">{familyModal.modalTitle}</h5>
                         <button
