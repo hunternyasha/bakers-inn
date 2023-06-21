@@ -36,14 +36,14 @@ const KidsCorner = () => {
           <div className="kidsBanner">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-12 col-md-6 col-lg-6 kidsItem">
+                <div className="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-6  kidsItem">
                   <img
                     src={require("../assets/images/Group 5.png")}
                     alt=""
                     className="img-fluid"
                   />
                 </div>
-                <div className="col-12 col-md-6 col-lg-6 kidsItem2">
+                <div className="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-6  kidsItem2">
                   <img
                     src={require("../assets/images/Group 15.png")}
                     alt=""

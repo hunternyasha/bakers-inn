@@ -134,7 +134,7 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <div className="col-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
                   <div className="kidsText">
                     <h2>{homePageTitles.kidsTitle}</h2>
                     <p>{homePageTitles.kidsSecTitle}</p>
@@ -152,7 +152,7 @@ const Home = () => {
           <div className="getNotified">
             <div className="container-fluid outerGetNot">
               <div className="row innerrGetNot">
-                <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 getNotItem">
+                <div className="col-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 getNotItem">
                   <h2>{homePageTitles.promoTitle}</h2>
                   <div className="input-group mb-3">
                     <input

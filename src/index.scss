@@ -529,7 +529,7 @@ nav {
     color: white;
 
     .row {
-      .col-lg-6 {
+      .col-12 {
         text-align: center;
         .kidsImage {
           position: relative;
@@ -3066,6 +3066,9 @@ footer {
         .coreValueitem:nth-child(4) {
           margin: 0;
         }
+        .coreValueitem:nth-child(5) {
+          margin: 0;
+        }
         .coreCards {
           .card {
             .card-body {
@@ -3304,487 +3307,545 @@ footer {
   }
 }
 
-// @media screen and (min-width: 1024px)  {
+@media screen and (max-width:1024px) {
+  nav {
+    .innerNav {
+      .navbar-brand {
+        img {
+          width: 80%;
+        }
+      }
 
-//   .homePage {
+      ul {
+        display: flex;
+        flex-direction: row;
 
-//     .banner {
+        li {
+          margin: 0 15px;
 
-//       .innerBanner {
+          a {
+            color: #261b6c;
+            font-family: "AvenirHeavy";
+            font-weight: 750;
+            font-size: 16px;
+            line-height: 41px;
+          }
+        }
 
-//         .bannerImages {
+        li:nth-child(5) {
+          background-color: rgb(202, 166, 82);
+          padding: 0px 30px;
+          border-radius: 4px;
 
-//           display: block;
-//           // img:nth-child(1) {
-//           //   margin: 0;
-//           // }
-//         }
-//       }
-//     }
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    .btn {
+      display: none;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  .homePage {
+    padding: 0;
+    .banner {
+      padding: 10% 0;
+      .innerBanner {
+        padding: 0;
+        .bannerItem {
+          text-align: center;
+          margin-left: 11px;
+          h1 {
+            margin: 0 0 0 0;
+            font-size: 31px;
+          }
+          p {
+            font-size: 25px;
+            margin-top: 15px;
+          }
+        }
+        .bannerImages {
+          margin-top: 4%;
+          display: none;
+          img:nth-child(1) {
+            margin: 0;
+          }
+        }
+      }
+    }
 
-//     .aboutBakerInn {
-//       text-align: center;
-//       .innerAboutBakersInn {
-//         padding: 0;
-//       }
-//       .outerAboutBakerInn {
-//         margin: 0;
-//         .AboutBakerInnItem {
-//           h2 {
-//             font-size: 30px;
-//           }
-//         }
-//         .AboutBakerInnItem2 {
-//           p {
-//             padding: 0;
-//             font-size: 17px;
-//             line-height: 1.5;
+    .aboutBakerInn {
+      .innerAboutBakersInn {
+        padding: 0;
+      }
+      .outerAboutBakerInn {
+        margin: 0;
+        .AboutBakerInnItem {
+          h2 {
+            font-size: 30px;
+          }
+        }
+        .AboutBakerInnItem2 {
+          p {
+            padding: 0;
+            font-size: 17px;
+            line-height: 1.5;
+          }
+          .btn {
+            font-size: 15px;
+          }
+        }
+        .AboutImages {
+          .AboutBakerInnImages {
+            img {
+              height: 100%;
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+    .ourProducts {
+      padding: 10% 0;
+      h2 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 73px;
+        color: #261b6c;
+      }
+      .OuterOurProducts {
+        .btn {
+          font-size: 14px;
+        }
+        .innerOurProducts {
+          .ourProductsImages {
+            img {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .bookATour {
+      text-align: center;
+      .outerBookTour {
+        .innerBookTour {
+          flex-direction: row;
+          .bookTourItem {
+            p {
+              padding: 0;
+              font-size: 17px;
+              line-height: 1.5;
+            }
+            h2 {
+              width: 100%;
+              font-size: 30px;
+            }
+            button {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .donationReq {
+      text-align: center;
+      padding: 10% 0;
+      .container-fluid {
+        .row {
+          .col-lg-6 {
+            h2 {
+              font-size: 30px;
+            }
+            p {
+              font-size: 17px;
+              line-height: 1.5;
+            }
+            button {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
 
-//           }
-//           .btn {
-//             font-size: 15px;
-//           }
-//         }
-//         .AboutImages {
-//           .AboutBakerInnImages {
-//             img {
-//               height: 100%;
-//               width: 100%;
-//               margin-bottom: 15px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .ourProducts {
-//       padding: 10% 0;
-//       h2 {
-//         font-family: "Montserrat";
-//         font-style: normal;
-//         font-weight: 800;
-//         font-size: 30px;
-//         line-height: 73px;
-//         color: #261b6c;
-//       }
-//       .OuterOurProducts {
-//         .btn {
-//           font-size: 14px;
-//         }
-//         .innerOurProducts{
-//           .ourProductsImages {
-//             img{
-//               height: auto;
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .bookATour {
-//       text-align: center;
-//       .outerBookTour {
-//         .innerBookTour {
-//           flex-direction: row;
-//           .bookTourItem {
-//             p {
-//               padding: 0;
-//               font-size: 17px;
-//               line-height: 1.5;
-//             }
-//             h2 {
-//               width: 100%;
-//               font-size: 30px;
-//             }
-//             button {
-//               font-size: 14px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .donationReq {
-//       text-align: center;
-//       padding: 10% 0;
-//       .container-fluid {
-//         .row {
-//           .col-lg-6 {
-//             h2 {
-//               font-size: 30px;
-//             }
-//             p {
-//               font-size: 17px;
-//               line-height: 1.5;
-//             }
-//             button {
-//               font-size: 14px;
-//             }
-//           }
-//         }
-//       }
-//     }
+    .kidsCorner {
+      .container-fluid {
+        padding: 15% 8px;
+        .row {
+          .col-lg-6 {
+            .kidsImage {
+              img {
+                display: none;
+              }
+            }
+            h2 {
+              font-size: 78px;
+              line-height: 1;
+              margin-bottom: 8px;
+            }
+            p {
+              padding: 0;
+              font-size: 17px;
+              line-height: 1.5;
+            }
+            .btn {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
 
-//     .kidsCorner {
-//       .container-fluid {
-//         padding: 15% 8px;
-//         .row {
-//           .col-lg-6 {
-//             .kidsImage {
-//               img {
-//                 display: none;
-//               }
-//             }
-//             h2 {
-//               font-size: 78px;
-//               line-height: 1;
-//               margin-bottom: 8px;
-//             }
-//             p {
-//               padding: 0;
-//               font-size: 17px;
-//               line-height: 1.5;
-//             }
-//             .btn {
-//               font-size: 14px;
-//             }
-//           }
-//         }
-//       }
-//     }
+    .bakersRecipes {
+      .bloc-tabs {
+        .tabs {
+          padding: 0 0 0 18px;
+          li {
+            font-size: 14px;
+          }
+        }
+      }
 
-//     .bakersRecipes {
-//       .bloc-tabs {
-//         .tabs {
-//           padding: 0 0 0 18px;
-//           li {
-//             font-size: 14px;
-//           }
-//         }
-//       }
+      .outerBakersRec {
+        .content-tabs {
+          .active-content {
+            .bakercard {
+              margin-bottom: 20px;
 
-//       .outerBakersRec {
-//         .content-tabs {
-//           .active-content {
-//             .bakercard {
-//               margin-bottom: 20px;
+              .card {
+                .card-body {
+                  h5 {
+                    font-size: 15px;
+                  }
+                  p {
+                    font-size: 10px;
+                  }
+                  .btn {
+                    padding: 8px;
+                    width: 21%;
+                    margin: -55px 0 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .getNotified {
+      padding: 5% 0;
+      margin: 0 0 8% 0;
+      .outerGetNot {
+        .innerrGetNot {
+          .getNotItem {
+            h2 {
+              font-size: 24px;
+              text-align: center;
+              margin-left: 15px;
+              margin-top: 0;
+            }
+            .d-flex {
+              img {
+                display: none;
+              }
+            }
 
-//               .card {
-//                 .card-body {
-//                   h5 {
-//                     font-size: 15px;
-//                   }
-//                   p {
-//                     font-size: 10px;
-//                   }
-//                   .btn {
-//                     padding: 8px;
-//                     width: 21%;
-//                     margin: -55px 0 0 0;
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .getNotified {
-//       padding: 5% 0;
-//       margin: 0 0 8% 0;
-//       .outerGetNot {
-//         .innerrGetNot {
-//           .getNotItem {
-//             h2 {
-//               font-size: 24px;
-//               text-align: center;
-//               margin-left: 15px;
-//               margin-top: 0;
-//             }
-//             .d-flex {
-//               img {
-//                 display: contents;
-//               }
-//             }
+            .input-group {
+              input {
+                padding: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-//             .input-group {
-//               input {
-//                 padding: 12px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
+  .aboutUs {
+    .aboutBanner {
+      h1 {
+        top: 382px;
+        font-size: 36px;
+      }
+    }
 
-//   .aboutUs {
-//     .aboutBanner {
-//       h1 {
-//         top: 286px;
-//         font-size: 25px;
-//       }
-//     }
+    .ourVisions {
+      .outerVisions {
+        .innerOurVisions {
+          .ourVisionItem {
+            .d-flex {
+              .missionText {
+                h2 {
+                  font-size: 22px;
+                  line-height: 1.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
-//     .ourVisions {
-//       .outerVisions {
-//         .innerOurVisions {
-//           .ourVisionItem {
-//             .d-flex {
-//               .missionText {
-//                 h2 {
-//                   font-size: 22px;
-//                   line-height: 1.5;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
+    .ourCoreValues {
+      h2 {
+        font-size: 27px;
+      }
 
-//     .ourCoreValues {
-//       h2 {
-//         font-size: 27px;
-//       }
+      .outerCoreValues {
+        .coreValueitem:nth-child(4) {
+          margin: 0;
+        }
+        .coreValueitem:nth-child(5) {
+          margin: 0;
+        }
+        .coreCards {
+          .card {
+            .card-body {
+              h5 {
+                font-size: 28px;
+              }
+              p {
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+    }
 
-//       .outerCoreValues {
-//         .coreCards {
-//           .card {
-//             .card-body {
-//               h5 {
-//                 font-size: 28px;
-//               }
-//               p {
-//                 line-height: 1;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
+    .aboutCeo {
+      padding: 20% 0;
+      .outerAboutCeo {
+        .innerAboutCeo {
+          .AboutCeoItem {
+            .ceoPadd {
+              text-align: center;
+              h2 {
+                font-size: 30px;
+                line-height: 1.5;
+              }
+              p {
+                line-height: 1.5;
+              }
+              .ceoSignature {
+                text-align: center !important;
+                p {
+                  font-size: 30px;
+                  span {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-//     .aboutCeo {
-//       padding: 20% 0;
-//       .outerAboutCeo {
-//         .innerAboutCeo {
-//           .AboutCeoItem {
-//             .ceoPadd {
-//               text-align: center;
-//               h2 {
-//                 font-size: 30px;
-//                 line-height: 1.5;
-//               }
-//               p {
-//                 line-height: 1.5;
-//               }
-//               .ceoSignature {
-//                 text-align: center !important;
-//                 p {
-//                   font-size: 30px;
-//                   span {
-//                     font-size: 18px;
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
+  .productsPage {
+    .productsBanner {
+      h1 {
+        top: 382px;
+        font-size: 36px;
+      }
+    }
 
-//   .productsPage {
-//     .productsBanner {
-//       h1 {
-//         top: 286px;
-//         font-size: 21px;
-//       }
-//     }
+    .ourProducts {
+      padding: 10% 0;
+      h2 {
+        font-size: 30px;
+      }
+      .bloc-tabs {
+        .tabs {
+          padding: 0 0 0 18px;
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+      .content-tabs {
+        padding: 0;
+      }
+    }
+  }
 
-//     .ourProducts {
-//       padding: 10% 0;
-//       h2 {
-//         font-size: 30px;
-//       }
-//       .bloc-tabs {
-//         .tabs {
-//           padding: 0 0 0 18px;
-//           li {
-//             font-size: 14px;
-//           }
-//         }
-//       }
-//       .content-tabs {
-//         padding: 0;
-//         .active-content {
-//           .outerBread {
-//             .innerBread {
-//               .card {
-//                 margin-left: 0;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
+  .bakersRecipes {
+    .outerBakersRec {
+      h2 {
+        font-size: 27px;
+      }
+      .bloc-tabs {
+        .tabs {
+          padding: 0 0 0 18px;
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+      .content-tabs {
+        .active-content {
+          .bakercard {
+            margin-bottom: 20px;
 
-//   .bakersRecipes {
-//     .outerBakersRec {
-//       h2 {
-//         font-size: 27px;
-//       }
-//       .bloc-tabs {
-//         .tabs {
-//           padding: 0 0 0 18px;
-//           li {
-//             font-size: 14px;
-//           }
-//         }
-//       }
-//       .content-tabs {
-//         .active-content {
-//           .bakercard {
-//             margin-bottom: 20px;
+            .card {
+              .card-body {
+                h5 {
+                  font-size: 15px;
+                }
+                p {
+                  font-size: 12px;
+                }
+                .btn {
+                  padding: 8px;
+                  width: 21%;
+                  margin: -55px 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-//             .card {
-//               .card-body {
-//                 h5 {
-//                   font-size: 15px;
-//                 }
-//                 p {
-//                   font-size: 12px;
-//                 }
-//                 .btn {
-//                   padding: 8px;
-//                   width: 21%;
-//                   margin: -55px 0 0 0;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
+  .kidsBanner {
+    padding: 5% 0 0 0 ;
+    .row {
+      flex-flow: column-reverse;
 
-//   .kidsBanner {
-//     .row {
-//       flex-flow: column-reverse;
-//     }
-//     .kidsItem {
-//       img {
-//         width: 100%;
-//         margin: 0;
-//       }
-//     }
-//     .kidsItem2 {
-//       img {
-//         width: 100%;
-//         margin: 0 0 0;
-//       }
-//     }
-//   }
+    }
+    .kidsItem {
+      
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    .kidsItem2 {
+      display: none;
+      img {
+        width: 100%;
+        margin: 0 0 0;
+      }
+    }
+  }
 
-//   .games {
-//     text-align: center;
-//     .gameBackground {
-//       padding: 5% 0;
-//       .row {
-//         flex-direction: column-reverse;
-//       }
-//     }
-//     p {
-//       padding: 0;
-//     }
-//   }
+  // .games {
+  //   text-align: center;
+  //   .gameBackground {
+  //     padding: 5% 0;
+  //     .row {
+  //       flex-direction: column-reverse;
+  //       .gameItem {
+  //         img {
+  //           width: 90%;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   p {
+  //     padding: 0;
+  //   }
+  // }
 
-//   .contactUsPage {
-//     .contactUsBanner{
-//       h1 {
-//         top: 286px;
-//         font-size: 21px;
-//       }
-//     }
-//     .contactAddresses {
-//       .outerContact{
-//         padding: 18% 5%;
-//         .innerContact{
-//           padding: 0;
-//           .contactAdresssItem{
-//            text-align:center;
-//             h3 {
-//               font-size: 20px;
-//             }
-//             p{
-//               font-size: 15px;
-//             }
-//             .voip{
-//               margin-bottom: 15px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .depots {
-//       .outerDepots{
-//         h1  {
-//           font-size: 20px;
-//         }
-//         .innerDeports {
-//           .depotsItem {
-//             .titleBorder{
-//               h3 {
-//                 font-size: 13px;
-//               }
-//             }
-//             .locationBorder{
-//               p{
-//                 font-size: 10px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .enquiries {
-//       text-align: center;
-//       .enqTitles{
-//         flex-direction: row;
-//         .enquiriesItem {
-//           h3{
-//             font-size: 15px;
-//           }
-//         }
-//       }
-//     }
-//     .emailUs {
-//       h2{
-//         font-size: 2;
-//       }
-//     }
-//   }
+  .contactUsPage {
+    .contactUsBanner {
+      h1 {
+        top: 382px;
+        font-size: 36px;
+      }
+    }
+    .contactAddresses {
+      .outerContact {
+        padding: 18% 5%;
+        .innerContact {
+          padding: 0;
+          .contactAdresssItem {
+            text-align: center;
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 15px;
+            }
+            .voip {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+    .depots {
+      .outerDepots {
+        h1 {
+          font-size: 20px;
+        }
+        .innerDeports {
+          .depotsItem {
+            .titleBorder {
+              h3 {
+                font-size: 13px;
+              }
+            }
+            .locationBorder {
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .enquiries {
+      text-align: center;
+      .enqTitles {
+        flex-direction: row;
+        .enquiriesItem {
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .emailUs {
+      h2 {
+        font-size: 2;
+      }
+    }
+  }
 
-//   footer {
-//     padding: 0 0 5% 0;
-//     .outerFooter {
-//       .innerFooter {
-//         justify-content: space-between;
-//       }
-//     }
-//     .copyright {
-//       display: block;
-//       margin-top: 30px;
-//       .d-flex {
-//         p {
-//           line-height: 34px;
-//         }
-//       }
-//       p {
-//         font-size: 15px;
-//         line-height: 1.5;
-//         margin-top: 15px;
-//         margin-bottom: 20px;
-//       }
-//     }
-//   }
+  // footer {
+  //   padding: 0 0 5% 0;
+  //   .outerFooter {
+  //     .innerFooter {
+  //       justify-content: space-between;
+  //     }
+  //   }
+  //   .copyright {
+  //     display: block;
+  //     margin-top: 30px;
+  //     .d-flex {
+  //       p {
+  //         line-height: 34px;
+  //       }
+  //     }
+  //     p {
+  //       font-size: 15px;
+  //       line-height: 1.5;
+  //       margin-top: 15px;
+  //       margin-bottom: 20px;
+  //     }
+  //   }
+  // }
+}
 
-// }
+

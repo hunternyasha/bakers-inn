@@ -24,7 +24,7 @@ const Banner = () => {
     <div className="banner">
       <div className="innerBanner container row">
         {bannerText.map((banner) => (
-          <div className="bannerItem col-12 col-md-12 col-lg-4 align-items-center" key={banner}>
+          <div className="bannerItem col-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 align-items-center" key={banner}>
             <h1>{banner.bannerTitle} <span>{banner.bannTitleSpan}</span> at the <span>{banner.bannTitleSpan2}</span> </h1>
             <p>{banner.bannerText}</p>
             <div className="btn">{banner.buttonText}</div>
@@ -32,7 +32,7 @@ const Banner = () => {
           </div>
         ))}
 
-        <div className="col-12 col-md-8 col-lg-8 ">
+        <div className="col-12 col-md-8 col-lg-12 col-xl-8 col-xxl-8">
           {bannerImages.map((images) => (
             <section>
               <div className="bannerImages">
