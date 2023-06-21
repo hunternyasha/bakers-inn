@@ -109,7 +109,7 @@ nav {
           line-height: 60px;
           color: white;
           margin-top: 36%;
-          span{
+          span {
             border-bottom: #b2904c 5px solid;
           }
         }
@@ -1774,7 +1774,6 @@ footer {
   //       font-size: 14px;
   //     }
   //   }
-    
 }
 @media screen and (max-width: 575px) {
   .homePage {
@@ -3307,7 +3306,7 @@ footer {
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   nav {
     .innerNav {
       .navbar-brand {
@@ -3392,7 +3391,7 @@ footer {
         .AboutBakerInnItem2 {
           p {
             padding: 0;
-            font-size: 17px;
+            font-size: 20px;
             line-height: 1.5;
           }
           .btn {
@@ -3441,8 +3440,9 @@ footer {
           .bookTourItem {
             p {
               padding: 0;
-              font-size: 17px;
+              font-size: 20px;
               line-height: 1.5;
+              text-align: start;
             }
             h2 {
               width: 100%;
@@ -3465,7 +3465,8 @@ footer {
               font-size: 30px;
             }
             p {
-              font-size: 17px;
+              font-size: 20px;
+              text-align: start;
               line-height: 1.5;
             }
             button {
@@ -3492,8 +3493,9 @@ footer {
               margin-bottom: 8px;
             }
             p {
+              text-align: start;
               padding: 0;
-              font-size: 17px;
+              font-size: 20px;
               line-height: 1.5;
             }
             .btn {
@@ -3718,13 +3720,11 @@ footer {
   }
 
   .kidsBanner {
-    padding: 5% 0 0 0 ;
+    padding: 5% 0 0 0;
     .row {
       flex-flow: column-reverse;
-
     }
     .kidsItem {
-      
       img {
         width: 100%;
         margin: 0;
@@ -3847,5 +3847,3 @@ footer {
   //   }
   // }
 }
-
-
